@@ -171,13 +171,13 @@ Also you can:
 
 ```typescript
   @SetCacheTTL((context: ExecutionContext) => {
-  const headers = context.switchToHttp().getRequest().headers;
+    const headers = context.switchToHttp().getRequest().headers;
 
-  if (headers.flag !== undefined) {
-    return 5;
-  }
+    if (headers.flag !== undefined) {
+      return 5;
+    }
 
-  return 0;
+    return 0;
 })
 
 ```
