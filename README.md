@@ -16,7 +16,7 @@ zirus-cache for Nest.JS - simple and modern cache library
 @CacheMethod()
 @Get()
 async getData(): Promise<string[]> {
-  return data;
+  return await data;
 }
 
 ```
@@ -116,7 +116,7 @@ It should be used on any endpoint you want to cache (if it is not used globally 
 export class DataController {
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 
 ```
@@ -132,7 +132,7 @@ export class DataController {
   @CacheMethod()
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 
 ```
@@ -148,7 +148,7 @@ By default, the key is generated from the URL (including query parameters)
   @SetCacheKey('key')
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 ```
 
@@ -163,7 +163,7 @@ By default is 0
   @SetCacheTTL(10)
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 ```
 
@@ -194,7 +194,7 @@ Sometimes you might want to set up tracking based on different factors, for exam
   })
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 ```
 
@@ -209,7 +209,7 @@ This decorator determines will be endpoint cached or not
   })
   @Get()
   async getData(): Promise<string[]> {
-    return data;
+    return await data;
   }
 ```
 
@@ -225,13 +225,13 @@ export class AppController {
 
   @Get('/foo')
   async foo(): Promise<string[]> {
-    return data;
+    return await data;
   }
 
   @Exclude()
   @Get('/bar')
   async bar(): Promise<string[]> {
-    return data;
+    return await data;
   }
 
 }
