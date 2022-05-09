@@ -1,0 +1,8 @@
+{
+	"type": "library",
+	"entryFile": "./lib/index",
+	"sourceRoot": "./lib",
+	"compilerOptions": {
+		"tsConfigPath": "./tsconfig.lib.json"
+	}
+}
