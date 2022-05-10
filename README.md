@@ -195,6 +195,7 @@ By default is 0
 ### `@SetCond()`
 
 This decorator determines will be endpoint cached or not
+
 It will be cached if the condition is true
 
 ```typescript
