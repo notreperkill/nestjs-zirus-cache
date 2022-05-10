@@ -153,7 +153,7 @@ By default, the key is generated from the URL (including query parameters)
 ```
 
 ```typescript
-  @SetCacheKey((context: ExecutionContext) => {
+  @SetCacheKey((context) => {
     return context.switchToHttp().getRequest().headers.authorization
   })
   @Get()
@@ -179,7 +179,7 @@ By default is 0
 ```
 
 ```typescript
-  @SetCacheTTL((context: ExecutionContext) => {
+  @SetCacheTTL((context) => {
   const headers = context.switchToHttp().getRequest().headers;
 
   if (headers.flag !== undefined) {
